@@ -11,8 +11,8 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow-x: hidden;
+li {
+    list-style: none;
 }
 
 section:not(:first-of-type) {
@@ -23,6 +23,10 @@ section:not(:first-of-type) {
         color: #666666;
         text-align: center;
         @include typography.Poppins(400, 20px);
+        
+        @media screen and (max-width: 757px) {
+            @include typography.Poppins(400, 15px);
+        }
     }
 }
 
@@ -30,8 +34,8 @@ section:not(:first-of-type) {
 h2 {
     @include typography.Poppins(700, 40px);
     text-align: center;
-}
-
-main {
-    width: 100vw;
+    
+    @media screen and (max-width: 757px) {
+        @include typography.Poppins(600, 32px);
+    }
 }
