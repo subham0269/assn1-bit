@@ -1,0 +1,100 @@
+@use 'typography';
+
+
+.products-list-container-grid {
+
+    margin: 2.5rem auto;
+    width: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2em;
+
+    @media (max-width: 567px) { //mobile view
+        grid-template-columns: repeat(1,1fr);
+        padding: 0 1em;
+    }
+    
+    @media (min-width: 568px) and (max-width: 767px) { //tablet view
+        grid-template-columns: repeat(3,1fr);
+        padding: 0 1.5em;
+    }
+
+    @media (min-width: 768px) and (max-width: 1250px) {
+        padding: 0 2em;
+    }
+}
+
+.grid-card {
+    // display: inline-block;
+    display: flex;
+    flex-direction: column;
+    background: #F4F5F7;
+    overflow: hidden;
+    @include typography.Poppins;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 0.6rem;
+
+        & > *:not(:first-child) {
+            margin-top: 0.2em;
+        }
+        
+        .product-name {
+            @include typography.Poppins(600, 24px);
+        }
+
+        .product-desc {
+            @include typography.Poppins(400, 16px);
+            color: #898989;
+        }
+
+        .price-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            @include typography.Poppins(600, 20px);
+            color: #3A3A3A;
+        }
+
+        .old-price {
+            @include typography.Poppins(400, 16px);
+            color: #B0B0B0;
+            text-decoration: line-through;
+        }
+    }
+}
+
+
+#products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+        padding: 1rem 3rem;
+        border: 1px solid #B88E2F;
+        color: #B88E2F;
+        @include typography.Poppins(600, 16px);
+        background-color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    
+        &:hover {
+            background-color: #B88E2F;
+            color: white;
+        }
+    }
+} 
+

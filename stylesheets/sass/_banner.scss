@@ -1,0 +1,62 @@
+@use 'typography';
+
+#banner-section {
+    min-height: 500px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
+    
+    .banner-img {
+        height: calc(100vh - 100px);
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.banner-content {
+    background-color: #FFF3E3;
+    width: 643px;
+    height: 443px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    padding: 30px 20px;
+    box-shadow: 0 0 0.1rem #666666;
+    
+    p {
+        @include typography.Poppins(500, 18px);
+        line-height: 24px;
+        word-spacing: 3px;
+        margin: 1.2em 0.5em 0 0;
+    }
+    
+    span {
+        @include typography.Poppins(500, 16px);
+    }
+
+    button {
+        margin-top: 1.5em;
+        background-color: #B88E2F;
+        padding: 20px 40px;
+        @include typography.Poppins(700, 16px);
+        border: none;
+        color: #ffffff;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: #ac8221;
+        }
+    }
+}
+
+
+h1 {
+    @include typography.Poppins(700, 52px);
+    margin-top: 0.5em;
+    color: #B88E2F;
+}

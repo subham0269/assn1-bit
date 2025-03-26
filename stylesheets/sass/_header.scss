@@ -1,0 +1,60 @@
+@use 'typography';
+
+header {
+    background-color: white;
+    width: 100vw;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav {
+    padding: 20px 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-list {
+    display: flex;
+
+    & > * {
+        cursor: pointer;
+        @include typography.Poppins(500, 16px);
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 0.3em;
+        }
+    }
+    
+    & >:not(:first-child) {
+        margin-left: 2em;
+    }
+}
+
+.user-controls {
+    display: flex;
+
+    & img {
+        width: 26px;
+        height: 26px;
+    }
+
+    & > ul >:not(:first-child) {
+        margin-left: 2em;
+    }
+}
