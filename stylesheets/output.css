@@ -53,7 +53,7 @@ nav {
 .nav-list > :not(:first-child) {
   margin-left: 2em;
 }
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 768px) {
   .nav-list {
     display: none;
   }
@@ -92,6 +92,64 @@ nav {
 #banner-section img {
   width: 100%;
   height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+@media screen and (max-width: 575px) {
+  #banner-section {
+    min-height: 500px;
+    height: calc(70vh - 100px);
+  }
+  #banner-section .banner-img {
+    height: 100%;
+  }
+  #banner-section img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #banner-section {
+    min-height: 500px;
+    height: calc(85vh - 100px);
+  }
+  #banner-section .banner-img {
+    height: 100%;
+  }
+  #banner-section img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  #banner-section {
+    min-height: 500px;
+    height: calc(90vh - 100px);
+  }
+  #banner-section .banner-img {
+    height: 100%;
+  }
+  #banner-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #banner-section {
+    height: calc(90vh - 100px);
+  }
+  #banner-section img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .banner-content {
@@ -113,10 +171,27 @@ nav {
   word-spacing: 3px;
   margin: 1.2em 0.5em 0 0;
 }
+@media screen and (max-width: 575px) {
+  .banner-content p {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    word-spacing: 4px;
+    margin: 0.6em 0.5em 0 0;
+  }
+}
 .banner-content span {
   font-family: Poppins, sans-serif;
   font-weight: 500;
   font-size: 16px;
+}
+@media screen and (max-width: 575px) {
+  .banner-content span {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+  }
 }
 .banner-content button {
   margin-top: 1.5em;
@@ -132,13 +207,45 @@ nav {
 .banner-content button:hover {
   background-color: #ac8221;
 }
+@media screen and (max-width: 575px) {
+  .banner-content button {
+    margin-top: 1.2em;
+    padding: 10px 20px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-content {
+    width: 85%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 12px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .banner-content {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
 
 h1 {
   font-family: Poppins, sans-serif;
   font-weight: 700;
   font-size: 52px;
-  margin-top: 0.5em;
   color: #B88E2F;
+}
+@media screen and (max-width: 575px) {
+  h1 {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 0.2em;
+  }
 }
 
 .category-container {
