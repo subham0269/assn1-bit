@@ -378,6 +378,22 @@ h1 {
   transform: translateX(0);
   opacity: 1;
 }
+.grid-card .discount-badge {
+  position: absolute;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  right: 4%;
+  top: 3%;
+  background-color: burlywood;
+}
 
 #products {
   display: flex;
