@@ -4,6 +4,7 @@
 @use 'productBrowser';
 @use 'productList';
 @use 'footer';
+@use 'testimonial';
 
 * {
     margin: 0;
@@ -37,5 +38,30 @@ h2 {
     
     @media screen and (max-width: 757px) {
         @include typography.Poppins(600, 32px);
+    }
+}
+
+
+li.links > a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding: 2px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color:rgb(0, 0, 0);
+        width: 0%;
+        height: 2px;
+        transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
     }
 }

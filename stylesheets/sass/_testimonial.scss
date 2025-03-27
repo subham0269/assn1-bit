@@ -1,0 +1,103 @@
+@use 'typography';
+
+#testimonial-grid {
+    & > p {
+        @include typography.Poppins(600, 18px);
+        color: #616161;
+        text-align: center;
+    }
+}
+
+.flex-container {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    
+    & img {
+        flex-shrink: 0;
+        width: 100%;
+        height: auto;
+        min-width: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
+    
+    .flex-1, .flex-3 {
+        width: 40%;
+        display: flex;
+        // align-items: flex-start;
+        gap: 1em;
+        div {
+            display: flex;
+            gap: 1em;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 771px) {
+        padding: 0.5em;
+        gap: 0.5em;
+
+        .flex-1, .flex-3 {
+            gap: 0.5em;
+            div {
+                gap: 0.5em;
+            }
+        }
+    }
+}
+
+
+
+// @media screen and (max-width: 771px) {
+//     .flex-container {
+//         display: grid;
+//         grid-template-columns: repeat(2, 1fr);
+//         gap: 10px;
+//     }
+    
+//     /* Flexbox for inner containers */
+//     .flex-1, .flex-3 {
+//         // display: flex;
+//         flex-direction: column;
+//         // align-items: flex-start;
+//         width: 100%;
+//         // gap: 10px;
+//         background-color: antiquewhite;
+//     }
+
+//     .flex-3 {
+//         grid-column: 2/3;
+//         grid-row: 1;
+//     }
+    
+//     .flex-1 div, .flex-3 div {
+//         display: flex;
+//         width: 100%;
+//         // gap: 10px;
+//     }
+    
+//     .flex-1 img, 
+//     .flex-3 img {
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover;
+//         border-radius: 10px; /* Optional for smooth edges */
+//     }
+    
+//     .flex-2 {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//     }
+    
+//     .flex-2 img {
+//         width: 100%;
+//         height: auto;
+//         object-fit: cover;
+//     }
+// }
