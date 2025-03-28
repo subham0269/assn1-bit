@@ -12,14 +12,23 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 section:not(:first-of-type) {
-    margin: 2rem auto;
+    margin: 3rem auto 0;
     & > #section-header span {
-        margin-top: 0.5em;
+        padding-top: 0.5em;
         display: block;
         color: #666666;
         text-align: center;
@@ -63,5 +72,71 @@ li.links > a {
         &::after {
             width: 100%;
         }
+    }
+}
+
+
+// dark mode toggle
+
+body.dark-theme {
+    main, header, footer {
+        background-color: #001b2e;
+    }
+
+    #section-header span {
+        color:#eef3f9;
+    }
+
+    #testimonial-grid > p {
+        color:#eef3f9;
+    }
+
+    .banner-content {
+        span {
+            color: black;
+        }
+        p {
+            color: black;
+        }
+    }
+
+    li > a, span, h2, p, h3 {
+        color: #eef3f9;
+
+        &::after {
+            background-color: #eef3f9;
+        }
+    }
+
+    section p {
+        color:#eef3f9;
+    }
+
+    #newsletter-btn {
+        background-color: #ffffff00;
+        color: #eef3f9;
+        border-color: #eef3f9;
+    }
+
+    input[type="email"] {
+        background-color: #001b2e;
+        color:#eef3f9;
+        border-color: #eef3f9;
+    }
+
+    .icons > path {
+        fill: #eef3f9;
+    }
+    
+    .icons-stroke > path {
+        stroke: #eef3f9;
+    }
+
+    footer, #rights {
+        border-color: #626262;
+    }
+
+    header .mobile-menu {
+        background-color:#001b2eb7;
     }
 }

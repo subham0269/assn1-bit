@@ -6,9 +6,16 @@
         color: #616161;
         text-align: center;
     }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .flex-container {
+    transform: translateX(-0%);
     padding: 1em;
     display: flex;
     justify-content: center;
@@ -38,6 +45,8 @@
     @media screen and (max-width: 771px) {
         padding: 0.5em;
         gap: 0.5em;
+
+        width: 140%;
 
         .flex-1, .flex-3 {
             gap: 0.5em;
