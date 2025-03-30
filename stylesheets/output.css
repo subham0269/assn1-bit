@@ -121,7 +121,11 @@ a.logo span {
   }
 }
 
-#menu:checked ~ .mobile-menu {
+#menu {
+  display: none;
+}
+
+.menu > #menu:checked ~ .mobile-menu {
   transform: translateX(0);
 }
 

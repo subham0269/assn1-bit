@@ -129,11 +129,11 @@ a.logo {
 }
 
 
-// input#menu {
-//     display: none;
-// }
+#menu {
+    display: none;
+}
 
-#menu:checked ~ .mobile-menu {
+.menu > #menu:checked ~ .mobile-menu {
     // display: block;
     transform: translateX(0);
     // background-color: rgb(38, 104, 167);
