@@ -52,7 +52,7 @@ nav {
             height: 40px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
             display: none;
         }
     }
@@ -100,9 +100,14 @@ a.logo {
     & > ul >:not(:first-child) {
         margin-left: 2em;
     }
-
+    
     @media screen and (max-width: 768px) {
         display: none;
+    }
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+        & > ul >:not(:first-child) {
+            margin-left: 1.5em;
+        }
     }
 }
 
