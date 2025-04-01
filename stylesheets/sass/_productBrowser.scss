@@ -16,15 +16,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        cursor: pointer;
 
         img {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: 100%;
+            transition: transform 0.4s ease-in;
+        }
+        & > div {
+            border-radius: 14px;
+            overflow: hidden;
         }
         
         h3 {
             text-align: center;
             @include typography.Poppins(600, 22px);
+        }
+    }
+
+    .card:hover {
+        & img {
+            transform: scale(1.2);
         }
     }
 
