@@ -1,0 +1,115 @@
+@use 'typography';
+
+.inspiration-container {
+    background-color: #FCF8F3;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: stretch;
+
+    .content {
+        margin: auto 0;
+        width: 35%;
+        padding: 1rem 2rem 1rem 4rem;
+
+        & > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            text-align: left;
+            color: #3A3A3A;
+            padding: 0;
+            line-height: 1.2em;
+            @include typography.Poppins(700, 40px);
+        }
+        p {
+            white-space: pre;
+            @include typography.Poppins(500, 16px);
+            color: #616161;
+        }
+
+        button {
+            padding: 1rem 3rem;
+            border: 1px solid #B88E2F;
+            color: white;
+            @include typography.Poppins(600, 16px);
+            background-color: #B88E2F;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            
+            &:hover {
+                background-color: #fff;
+                color: #B88E2F;
+            }
+        }
+    }
+
+    .carousel-container {
+        position: relative;
+        flex-grow: 1;
+        overflow: hidden;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        // align-content: flex-start;
+        padding: 2rem 0;
+        gap: 2em;
+
+        & > img {
+            align-self: flex-start;
+            width: 400px;
+            height: 95%;
+            object-fit: cover;
+            object-position: center;
+            aspect-ratio: auto;
+            max-height: none;
+        }
+        
+        & > img:not(:first-child) {
+            width: 350px;
+            height: 80%;
+            // transform: scale(0.8);
+        }
+
+        button {
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            border: none;
+            background-color: #fff;
+            box-shadow: 0 0 4px 0.5px rgb(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            padding: 0.5em;
+            width: 2.5rem;
+            height: 2.5rem;
+            cursor: pointer;
+            align-items: center;
+            outline: none;
+            transition: all 0.3s ease;
+            z-index: 3;
+            
+            &:hover {
+                background-color: #fff;
+                box-shadow: 0 0 7px 0.5px rgb(0, 0, 0, 0.4);
+            }
+
+            img {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+        #next {
+            right: 1rem;
+        }
+        #prev {
+            img {
+                rotate: 180deg;
+            }
+            left: 1rem;
+        }
+    }
+}

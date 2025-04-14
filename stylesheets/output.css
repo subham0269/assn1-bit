@@ -7,7 +7,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 100;
 }
 @media screen and (max-width: 575px) {
   header {
@@ -788,6 +788,113 @@ address {
   .flex-container .flex-1 div, .flex-container .flex-3 div {
     gap: 0.5em;
   }
+}
+
+.inspiration-container {
+  background-color: #FCF8F3;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  align-items: stretch;
+}
+.inspiration-container .content {
+  margin: auto 0;
+  width: 35%;
+  padding: 1rem 2rem 1rem 4rem;
+}
+.inspiration-container .content > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.inspiration-container .content h2 {
+  text-align: left;
+  color: #3A3A3A;
+  padding: 0;
+  line-height: 1.2em;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+.inspiration-container .content p {
+  white-space: pre;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #616161;
+}
+.inspiration-container .content button {
+  padding: 1rem 3rem;
+  border: 1px solid #B88E2F;
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #B88E2F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.inspiration-container .content button:hover {
+  background-color: #fff;
+  color: #B88E2F;
+}
+.inspiration-container .carousel-container {
+  position: relative;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  gap: 2em;
+}
+.inspiration-container .carousel-container > img {
+  align-self: flex-start;
+  width: 400px;
+  height: 95%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: auto;
+  max-height: none;
+}
+.inspiration-container .carousel-container > img:not(:first-child) {
+  width: 350px;
+  height: 80%;
+}
+.inspiration-container .carousel-container button {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0.5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  align-items: center;
+  outline: none;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+.inspiration-container .carousel-container button:hover {
+  background-color: #fff;
+  box-shadow: 0 0 7px 0.5px rgba(0, 0, 0, 0.4);
+}
+.inspiration-container .carousel-container button img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.inspiration-container .carousel-container #next {
+  right: 1rem;
+}
+.inspiration-container .carousel-container #prev {
+  left: 1rem;
+}
+.inspiration-container .carousel-container #prev img {
+  rotate: 180deg;
 }
 
 * {
